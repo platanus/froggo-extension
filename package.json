@@ -34,10 +34,5 @@
     "sass-loader": "^13.0.0",
     "vue-cli-plugin-chrome-extension-cli": "~1.1.4",
     "vue-template-compiler": "^2.6.14"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
