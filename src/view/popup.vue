@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import '@/assets/styles/index.css';
+
 export default {
   name: 'popupView',
   data () {
