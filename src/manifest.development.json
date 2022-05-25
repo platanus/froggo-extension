@@ -2,6 +2,12 @@
     "manifest_version": 3,
     "name": "Froggo",
     "description": "Pull Requests que transmiten cultura",
+    "permissions": [
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "https://froggo.platan.us/*",
+    ],
     "version": "0.0.1",
     "action": {
         "default_popup": "popup.html"
