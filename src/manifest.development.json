@@ -6,7 +6,7 @@
         "clipboardWrite"
     ],
     "host_permissions": [
-        "https://froggo.platan.us/*",
+        "https://froggo.platan.us/*"
     ],
     "version": "0.2.0",
     "action": {
