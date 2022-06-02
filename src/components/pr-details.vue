@@ -110,18 +110,43 @@
             ref="userSlider"
             :button="false"
           >
-            <div
+            <v-tooltip
               v-for="user in users"
               :key="user.id"
               class="flex justify-center items-center mx-2 mb-2 w-12 h-12 rounded-full shadow-md cursor-pointer"
               :class="user.colorClass"
               @click="selectReviewer(user)"
             >
-              <img
-                class="w-10 h-10 bg-white rounded-full"
-                :src="user.avatarUrl"
-              >
-            </div>
+              <div>
+                <img
+                  class="w-10 h-10 bg-white rounded-full"
+                  :src="user.avatarUrl"
+                >
+              </div>
+              <template #popper>
+                <div
+                  class="flex flex-col items-center"
+                >
+                  <p
+                    class="text-base font-bold"
+                  >
+                    @{{ user.login }}
+                  </p>
+                  <div
+                    v-if="user.tags.length"
+                    class="flex flex-wrap flex-shrink gap-y-1 justify-center py-1 space-x-1 max-w-xs"
+                  >
+                    <div
+                      v-for="tag in user.tags"
+                      :key="tag.id"
+                      class="flex-shrink-0 px-2 h-5 text-xs rounded-full bg-froggo-red"
+                    >
+                      {{ tag.name }}
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </v-tooltip>
           </vue-horizontal>
         </div>
         <div>
