@@ -115,14 +115,15 @@
               :key="user.id"
               class="flex justify-center items-center mx-2 mb-2 w-12 h-12 rounded-full shadow-md cursor-pointer"
               :class="user.colorClass"
-              @click="selectReviewer(user)"
             >
-              <div>
+              <button
+                @click="selectReviewer(user)"
+              >
                 <img
                   class="w-10 h-10 bg-white rounded-full"
                   :src="user.avatarUrl"
                 >
-              </div>
+              </button>
               <template #popper>
                 <div
                   class="flex flex-col items-center"
